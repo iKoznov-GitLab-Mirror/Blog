@@ -18,7 +18,7 @@ variables:
 
 default:
   before_script:
-    - hostnamectl
+    #- hostnamectl
     - lscpu
     - apk add --update --no-cache curl git go
     #- git submodule update --init --recursive
