@@ -18,11 +18,13 @@ variables:
 
 default:
   before_script:
-    - apk add --update --no-cache git go
-    - git submodule update --init --recursive
-    - hugo mod init gitlab.com/pages/hugo
-    - hugo mod get -u github.com/theNewDynamic/gohugo-theme-ananke
+    #- apk add --update --no-cache git go
+    #- git submodule update --init --recursive
+    #- hugo mod init gitlab.com/pages/hugo
+    #- hugo mod get -u github.com/theNewDynamic/gohugo-theme-ananke
     #- hugo mod get -u github.com/thegeeklab/hugo-geekblog
+    - mkdir -p themes/hugo-geekblog/
+    - curl -L https://github.com/thegeeklab/hugo-geekblog/releases/latest/download/hugo-geekblog.tar.gz | tar -xz -C themes/hugo-geekblog/ --strip-components=1
 
 test:
   script:
