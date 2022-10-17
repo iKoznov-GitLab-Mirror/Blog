@@ -22,6 +22,7 @@ default:
     - git submodule update --init --recursive
     - hugo mod init gitlab.com/pages/hugo
     - hugo mod get -u github.com/theNewDynamic/gohugo-theme-ananke
+    #- hugo mod get -u github.com/thegeeklab/hugo-geekblog
 
 test:
   script:
