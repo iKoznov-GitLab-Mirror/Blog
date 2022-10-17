@@ -13,7 +13,7 @@
 # If your theme is in the themes directory, you just need to specify its name.
 #
 #theme = "ananke"
-theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+theme = ["github.com/panr/hugo-theme-terminal"]
 
 baseurl = "https://ikoznov.gitlab.io/blog/"
 title = "Igor Koznov programming blog"
