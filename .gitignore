@@ -1,7 +1,5 @@
-.idea/
-
-public/
-.hugo_build.lock
-themes/ananke
-go.mod
-go.sum
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
