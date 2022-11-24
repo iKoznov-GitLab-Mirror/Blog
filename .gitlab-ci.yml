@@ -1,4 +1,4 @@
-image: docker pull jekyll/jekyll:4.3
+image: jekyll/jekyll:4
 
 variables:
   JEKYLL_ENV: production
