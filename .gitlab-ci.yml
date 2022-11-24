@@ -1,4 +1,4 @@
-image: ruby:latest
+image: jekyll/jekyll:4
 
 variables:
   JEKYLL_ENV: production
