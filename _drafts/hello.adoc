@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Hello AsciiDoc!"
-date:   2022-11-24
-categories: jekyll update
+category: Tech
 ---
 
-:source-highlighter: rouge
-
+= Hello AsciiDoc!
+Igor Koznov
+:page-category: Tech
+:page-tags: [ruby, jekyll, asciidoctor, ssg]
 :jekyll-docs: https://jekyllrb.com/docs/home
 :jekyll-gh:   https://github.com/jekyll/jekyll
 :jekyll-talk: https://talk.jekyllrb.com/
@@ -32,7 +32,22 @@ print_hi('Tom')
 
 Check out the {jekyll-docs}[Jekyll docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at {jekyll-gh}[Jekyll’s GitHub repo]. If you have questions, you can ask them on {jekyll-talk}[Jekyll Talk].
 
-[,cpp]
+NOTE: An admonition draws the reader's attention to auxiliary information.
+
+Here are the other built-in admonition types:
+
+IMPORTANT: Don't forget the children!
+
+TIP: Look for the warp zone under the bridge.
+
+CAUTION: Slippery when wet.
+
+WARNING: The software you're about to use is untested.
+
+IMPORTANT: Sign off before stepping away from your computer.
+
+image::/abc/windows-clion-arch.png[]
+
 ----
 #include <iostream>
 

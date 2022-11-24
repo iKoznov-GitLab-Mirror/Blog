@@ -29,10 +29,21 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+permalink: /:year/:month/:day/:title/
+
 # Build settings
 theme: minima
 plugins:
+  - jekyll-postfiles
+  - jekyll-asciidoc
+  - jekyll-archives
   - jekyll-feed
+
+asciidoc: {}
+asciidoctor:
+  attributes:
+    - source-highlighter=rouge
+    - source-language=cpp
 
 # Exclude from processing.
 # The following items will not be processed, by default.
