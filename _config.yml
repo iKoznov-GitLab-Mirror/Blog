@@ -33,6 +33,9 @@ permalink: /:year/:month/:day/:title/
 
 # Build settings
 theme: minima
+minima:
+  skin: solarized-light
+
 plugins:
   - jekyll-postfiles
   - jekyll-asciidoc
@@ -44,6 +47,7 @@ asciidoctor:
   attributes:
     - source-highlighter=rouge
     - source-language=cpp
+    - icons=font
 
 # Exclude from processing.
 # The following items will not be processed, by default.
