@@ -18,29 +18,34 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Igor Koznov's Programming Blog
+email: ikoznov@proton.me
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+#baseurl: "" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: iKoznov
 
-permalink: /:year/:month/:day/:title/
+plugins:
+  - jekyll-sitemap
+  - jekyll-postfiles
+  - jekyll-asciidoc
+  - jekyll-archives
+  - jekyll-feed
+
+#permalink: /:year/:month/:day/:title/
+permalink: /posts/:title/
 
 # Build settings
 theme: minima
 minima:
   skin: solarized-light
-
-plugins:
-  - jekyll-postfiles
-  - jekyll-asciidoc
-  - jekyll-archives
-  - jekyll-feed
+  social_links:
+#    github: iKoznov
+#    linkedin: jekyll
+#    rss: rss
 
 asciidoc: {}
 asciidoctor:
@@ -48,6 +53,20 @@ asciidoctor:
     - source-highlighter=rouge
     - source-language=cpp
     - icons=font
+
+show_excerpts: true
+google_analytics: UA-NNNNNNNN-N
+
+exclude:
+  - README*
+  - LICENSE*
+
+defaults:
+  - # without this jekyll-sitemap fails
+    scope:
+      path: "**/*.pdf"
+    values:
+      sitemap: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.

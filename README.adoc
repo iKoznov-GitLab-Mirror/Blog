@@ -1,0 +1,16 @@
+:toc:
+
+== Build and host locally
+
+[source,shell]
+----
+bundle exec jekyll serve --livereload --drafts
+----
+
+== Jekyll with minima theme tutorials
+
+* https://www.chrishasz.com/yaght/general/working-with-minima[Tutorial: Working with Minima]
+
+* https://jekyllrb.com/docs/structure/[Documentation: Directory structure]
+
+* https://github.com/planetjekyll/awesome-jekyll-plugins[Awesome Jekyll Plugins]
