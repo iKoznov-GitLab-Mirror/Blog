@@ -57,7 +57,7 @@ asciidoctor:
     - icons=font
 
 show_excerpts: true
-google_analytics: UA-NNNNNNNN-N
+google_analytics: UA-NNNNNMMM-N
 
 exclude:
   - README*
