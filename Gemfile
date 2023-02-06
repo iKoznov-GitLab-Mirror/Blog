@@ -7,22 +7,25 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "kramdown-parser-gfm"
+# gem "kramdown-parser-gfm"
 gem "jekyll"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", github: "jekyll/minima"
-gem 'jekyll-sitemap'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
+
 # If you have any plugins, put them here!
+gem 'jekyll-sitemap'
 group :jekyll_plugins do
   gem 'jekyll-postfiles'
   gem "jekyll-asciidoc"
-  gem "jekyll-archives"
-  gem "jekyll-feed"
+  gem 'jekyll-analytics'
+  #gem "jekyll-feed" # included in minima
+  #gem 'jekyll-seo-tag' # included in minima
+  #gem "jekyll-archives"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

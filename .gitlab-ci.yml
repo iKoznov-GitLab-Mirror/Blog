@@ -1,7 +1,6 @@
 image: jekyll/jekyll:4
 
 variables:
-  JEKYLL_ENV: production
   LC_ALL: C.UTF-8
 
 before_script:
@@ -11,7 +10,7 @@ before_script:
 test:
   stage: test
   script:
-  - bundle exec jekyll build -d test --draft --config _config.yml,_config-gitlab.yml
+  - bundle exec jekyll build -d test --draft --config _config.yml
   artifacts:
     paths:
     - test
@@ -20,6 +19,8 @@ test:
 
 pages:
   stage: deploy
+  variables:
+    JEKYLL_ENV: production
   script:
   - bundle exec jekyll build -d public --config _config.yml,_config-gitlab.yml
   artifacts:

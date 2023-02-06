@@ -32,8 +32,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-postfiles
   - jekyll-asciidoc
-  - jekyll-archives
-  - jekyll-feed
+  - jekyll-analytics
+  #- jekyll-feed # included in minima
+  #- jekyll-seo-tag # included in minima
+  #- jekyll-archives
 
 #permalink: /:year/:month/:day/:title/
 permalink: /posts/:title/
