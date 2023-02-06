@@ -45,9 +45,8 @@ theme: minima
 minima:
   skin: solarized-light
   social_links:
-#    github: iKoznov
-#    linkedin: jekyll
-#    rss: rss
+    - { platform: github, user_url: "https://github.com/iKoznov" }
+    #- { platform: linkedin, user_url: "https://github.com/jekyll/jekyll" }
 
 asciidoc: {}
 asciidoctor:
@@ -65,10 +64,8 @@ exclude:
 
 defaults:
   - # without this jekyll-sitemap fails
-    scope:
-      path: "**/*.pdf"
-    values:
-      sitemap: false
+    scope: { path: "**/*.pdf" }
+    values: { sitemap: false }
 
 # Exclude from processing.
 # The following items will not be processed, by default.
