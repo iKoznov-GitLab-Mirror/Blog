@@ -7,10 +7,15 @@ before_script:
   - gem install bundler
   - bundle install
 
+env:
+  stage: test
+  script:
+    - export
+
 test:
   stage: test
   script:
-  - bundle exec jekyll build -d test --draft --config _config.yml
+    - bundle exec jekyll build -d test --draft --config _config.yml
   artifacts:
     paths:
     - test
