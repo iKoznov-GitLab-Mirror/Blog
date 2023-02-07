@@ -2,6 +2,15 @@
 
 == Build and host locally
 
+Install Jekyll with plugins:
+
+[source,shell]
+----
+bundle install
+----
+
+Build and host locally with live reload:
+
 [source,shell]
 ----
 bundle exec jekyll serve --livereload --drafts
@@ -14,3 +23,13 @@ bundle exec jekyll serve --livereload --drafts
 * https://jekyllrb.com/docs/structure/[Documentation: Directory structure]
 
 * https://github.com/planetjekyll/awesome-jekyll-plugins[Awesome Jekyll Plugins]
+
+* https://mademistakes.com/articles/[]
+
+== TODO
+
+Setup Staticman for comments:
+
+https://nithiya.gitlab.io/post/staticman-jekyll-gitlab/
+
+https://mademistakes.com/mastering-jekyll/static-comments/
