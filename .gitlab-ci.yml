@@ -27,7 +27,8 @@ pages:
   variables:
     JEKYLL_ENV: production
   script:
-  - bundle exec jekyll build -d public --config _config.yml,_config-gitlab.yml
+    # TODO: use $CI_PROJECT_URL to get --baseurl and --url instead of hardcoding _config-gitlab.yml
+    - bundle exec jekyll build -d public --config _config.yml,_config-gitlab.yml
   artifacts:
     paths:
     - public
