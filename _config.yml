@@ -31,7 +31,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-postfiles
   - jekyll-asciidoc
-  - jekyll-typogrify
+  #- jekyll-typogrify
   #- jekyll-analytics # included in minima
   #- jekyll-feed # included in minima
   #- jekyll-seo-tag # included in minima
