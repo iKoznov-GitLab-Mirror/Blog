@@ -56,7 +56,7 @@ asciidoctor:
     - icons=font
 
 show_excerpts: true
-google_analytics: UA-NNNNNNNN-N # minima feature
+google_analytics: G-X2LJQ55K1S # minima feature
 
 exclude:
   - README*
