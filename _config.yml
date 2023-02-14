@@ -28,6 +28,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 plugins:
+  #- jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-postfiles
   - jekyll-asciidoc
@@ -40,7 +41,7 @@ plugins:
 permalink: /:year/:month/:day/:title/
 #permalink: /posts/:title/
 
-# Build settings
+#remote_theme: JakeSteam/minimaJake
 theme: minima
 minima:
   skin: solarized-light
