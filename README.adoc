@@ -30,6 +30,12 @@ bundle exec jekyll serve --livereload --drafts
 
 Setup Staticman for comments:
 
-https://nithiya.gitlab.io/post/staticman-jekyll-gitlab/
+* https://nithiya.gitlab.io/post/staticman-jekyll-gitlab/
 
-https://mademistakes.com/mastering-jekyll/static-comments/
+* https://mademistakes.com/mastering-jekyll/static-comments/
+
+Or use giscus with GitHub Discussions:
+
+* https://giscus.app/
+
+* https://thiagoalves.ai/adding-comments-to-jekyll-using-giscus/
