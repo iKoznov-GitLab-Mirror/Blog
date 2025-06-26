@@ -77,6 +77,17 @@ defaults:
   - # without this jekyll-sitemap fails
     scope: { path: "**/*.pdf" }
     values: { sitemap: false }
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
