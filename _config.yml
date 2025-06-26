@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: My Programming Blog
-author: { name: Igor Koznov, email: ikoznov@proton.me }
+title: Igor Koznov personal website
+author: { name: Igor Koznov, email: igor.koznov90@protonmail.com }
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -33,9 +33,9 @@ plugins:
   - jekyll-postfiles
   - jekyll-asciidoc
   #- jekyll-typogrify
-  #- jekyll-analytics # included in minima
-  #- jekyll-feed # included in minima
-  #- jekyll-seo-tag # included in minima
+  - jekyll-analytics # included in minima
+  - jekyll-feed # included in minima
+  - jekyll-seo-tag # included in minima
   #- jekyll-archives
 
 permalink: /:year/:month/:day/:title/
@@ -44,10 +44,11 @@ permalink: /:year/:month/:day/:title/
 #remote_theme: JakeSteam/minimaJake
 theme: minima
 minima:
-  skin: solarized-light
+  skin: classic
   social_links:
-    - { platform: github, user_url: https://github.com/iKoznov }
-    #- { platform: linkedin, user_url: "https://github.com/jekyll/jekyll" }
+    - { title: "LinkedIn", icon: linkedin, url: "https://github.com/jekyll/jekyll" }
+    - { title: "Google Scholar",  icon: google-scholar, url: "https://scholar.google.com/citations?hl=en&user=pB5WTLUAAAAJ" }
+    - { title: "GitHub", icon: github, url: "https://github.com/iKoznov" }
 
 asciidoc: {}
 asciidoctor:
@@ -62,6 +63,9 @@ google_analytics: G-X2LJQ55K1S # minima feature
 exclude:
   - README*
   - LICENSE*
+  - Dockerfile
+  - .github/
+  - .gitlab-ci.yml
 
 defaults:
   - # without this jekyll-sitemap fails

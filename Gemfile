@@ -25,9 +25,9 @@ group :jekyll_plugins do
   gem "jekyll-asciidoc"
   #gem "jekyll-remote-theme"
   #gem 'jekyll-typogrify'
-  #gem 'jekyll-analytics' # included in minima
-  #gem "jekyll-feed" # included in minima
-  #gem 'jekyll-seo-tag' # included in minima
+  gem 'jekyll-analytics' # included in minima
+  gem "jekyll-feed" # included in minima
+  gem 'jekyll-seo-tag' # included in minima
   #gem "jekyll-archives"
 end
 
