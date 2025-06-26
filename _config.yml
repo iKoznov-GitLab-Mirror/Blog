@@ -45,6 +45,9 @@ permalink: /:year/:month/:day/:title/
 theme: minimal-mistakes-jekyll
 minima:
   skin: classic
+  nav_pages:
+    - portfolio.adoc
+    - about.adoc
   social_links:
     - { title: "LinkedIn", icon: linkedin, url: "https://github.com/jekyll/jekyll" }
     - { title: "Google Scholar",  icon: google-scholar, url: "https://scholar.google.com/citations?hl=en&user=pB5WTLUAAAAJ" }
