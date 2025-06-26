@@ -21,6 +21,7 @@ gem "minima", github: "jekyll/minima"
 gem 'jekyll-sitemap'
 group :jekyll_plugins do
   gem 'jekyll-postfiles'
+  gem 'asciidoctor-diagram'
   gem "jekyll-asciidoc"
   #gem "jekyll-remote-theme"
   #gem 'jekyll-typogrify'

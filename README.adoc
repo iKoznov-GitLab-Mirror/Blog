@@ -1,20 +1,23 @@
 :toc:
 
-== Build and host locally
+=== Web site site
 
-Install Jekyll with plugins:
+Site is hosted with GitHub pages https://ikoznov.github.io/blog[].
 
-[source,shell]
-----
-bundle install
-----
+=== Build locally
 
-Build and host locally with live reload:
+Everything needed to build docs locally is packed into one Docker image. First following command builds that image. Second - builds site and runs it on http://localhost:4000[] with live reloading on source files edit:
 
 [source,shell]
 ----
-bundle exec jekyll serve --livereload --drafts
+docker build -t ikoznov/jekyll:latest -f Dockerfile .
+rm -rf Gemfile.lock || true && docker rm -f "ikoznov_jekyll" && docker run --rm -it -v `pwd`:/project -w /project ikoznov/jekyll:latest bundle install --local && docker run -it -v `pwd`:/project -w /project -p 4000:4000 -p 35729:35729 --name "ikoznov_jekyll" ikoznov/jekyll:latest bundle exec jekyll serve --livereload --host 0.0.0.0 --drafts
 ----
+
+[NOTE]
+====
+Live reload with diagrams may sometimes do not work initially. Just in case, reload page with browser cache reset.
+====
 
 == Jekyll with minima theme tutorials
 
