@@ -15,11 +15,11 @@ include::_example.adoc[]
 :example: _graphviz.adoc
 include::_example.adoc[]
 
-'''
-
-.https://gist.github.com/plamentotev/be495e81abd52dc10e7dd51fbb71dd8c[]
-:example: _mermaid.adoc
-include::_example.adoc[]
+// '''
+//
+// .https://gist.github.com/plamentotev/be495e81abd52dc10e7dd51fbb71dd8c[]
+// :example: _mermaid.adoc
+// include::_example.adoc[]
 
 == Class diagram
 
