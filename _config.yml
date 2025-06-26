@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Hi, welcome to my webpage
+title: Igor Koznov's homepage
 author:
   name: "Igor Koznov"
-  bio: "Programming is fun"
+  bio: "Programming is fun."
   avatar: "/assets/images/bio-photo.webp"
   links:
     - label: "Email"
