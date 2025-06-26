@@ -22,24 +22,24 @@ gem "minima", github: "jekyll/minima"
 
 # If you have any plugins, put them here!
 gem 'jekyll-sitemap'
-group :jekyll_plugins do
-  gem 'jekyll-postfiles'
-  gem 'asciidoctor-diagram'
-  gem 'asciidoctor-diagram-plantuml'
-  gem "jekyll-asciidoc"
-  #gem "jekyll-remote-theme"
-  #gem 'jekyll-typogrify'
-  gem 'jekyll-analytics' # included in minima
-  gem "jekyll-feed" # included in minima
-  gem 'jekyll-seo-tag' # included in minima
-  #gem "jekyll-archives"
-end
+#group :jekyll_plugins do
+    gem 'jekyll-postfiles'
+    gem 'asciidoctor-diagram'
+    gem 'asciidoctor-diagram-plantuml'
+    gem "jekyll-asciidoc"
+    #gem "jekyll-remote-theme"
+    #gem 'jekyll-typogrify'
+    gem 'jekyll-analytics' # included in minima
+    gem "jekyll-feed" # included in minima
+    gem 'jekyll-seo-tag' # included in minima
+    #gem "jekyll-archives"
+#end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo"
-  gem "tzinfo-data"
+    gem "tzinfo"
+    gem "tzinfo-data"
 end
 
 # Performance-booster for watching directories on Windows
