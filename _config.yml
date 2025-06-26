@@ -29,6 +29,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 plugins:
   #- jekyll-remote-theme
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-postfiles
   - jekyll-asciidoc
@@ -40,6 +41,15 @@ plugins:
 
 #permalink: /:year/:month/:day/:title/
 permalink: /posts/:title/
+
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 
 #remote_theme: JakeSteam/minimaJake
 theme: minimal-mistakes-jekyll
