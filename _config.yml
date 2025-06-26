@@ -19,7 +19,27 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Igor Koznov personal website
-author: { name: Igor Koznov, email: igor.koznov90@protonmail.com }
+author:
+  name: "Igor Koznov"
+  bio: "Programming is fun"
+  avatar: "/assets/images/bio-photo.webp"
+  links:
+    - label: "Email"
+      icon: "fa-solid fa-envelope"
+      url: "mailto:igor.koznov90@protonmail.com"
+    - label: "Website"
+      icon: "fa-solid fa-link"
+      url: "https://ikoznov.gitlab.io"
+    - label: "Google Scholar"
+      icon: "fa-brands fa-google-scholar"
+      url: "https://scholar.google.com/citations?hl=en&user=pB5WTLUAAAAJ"
+    - label: "LinkedIn"
+      icon: "fa-brands fa-linkedin"
+      url: "https://github.com/iKoznov"
+    - label: "GitHub"
+      icon: "fa-brands fa-github"
+      url: "https://github.com/iKoznov"
+
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
