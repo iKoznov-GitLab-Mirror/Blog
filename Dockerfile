@@ -1,7 +1,7 @@
 # Build image:
 #   docker build -t uninav/build_docs:latest -f docs.Dockerfile .
 
-FROM ubuntu:24.04
+FROM ubuntu as ikoznov_jekyll
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
