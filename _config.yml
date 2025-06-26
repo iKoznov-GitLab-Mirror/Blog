@@ -52,6 +52,8 @@ minima:
 
 asciidoc: {}
 asciidoctor:
+  base_dir: :docdir
+  safe: unsafe
   attributes:
     - source-highlighter=rouge
     - source-language=cpp

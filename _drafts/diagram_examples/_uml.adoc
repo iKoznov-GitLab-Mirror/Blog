@@ -1,0 +1,11 @@
+[plantuml, asciidoc-plant-uml-sample, svg]
+----
+class A<T> <<singleton>> {
+    {abstract} -int x
+    {static} #void meta()
+}
+
+class B
+
+A <|-- B
+----

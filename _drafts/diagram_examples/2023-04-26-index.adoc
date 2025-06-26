@@ -1,0 +1,82 @@
+= Asciidoc diagrams Demo
+
+AsciiDoc integrates with many text drawing formats like GraphViz, Gnuplot or TikZ. For the complete list look here https://docs.asciidoctor.org/diagram-extension/latest[]. Here is some examples.
+
+
+== Some image
+
+.https://github.com/asciidoctor/asciidoctor-diagram/issues/281#issuecomment-686722430[]
+:example: _image1.adoc
+include::_example.adoc[]
+
+'''
+
+.https://asciidoctor.org/news/2014/02/18/plain-text-diagrams-in-asciidoctor/#controlling-the-output[]
+:example: _graphviz.adoc
+include::_example.adoc[]
+
+// '''
+//
+// .https://gist.github.com/plamentotev/be495e81abd52dc10e7dd51fbb71dd8c[]
+// :example: _mermaid.adoc
+// include::_example.adoc[]
+
+== Class diagram
+
+.https://germaniumhq.com/2019/02/24/2019-02-24-Embedding-Diagrams-Into-Documentation-in-AsciiDoctor[]
+:example: _uml.adoc
+include::_example.adoc[]
+
+== Git graph
+
+.https://tex.stackexchange.com/a/292857[]
+:example: _git1.adoc
+include::_example.adoc[]
+
+'''
+
+.https://tex.stackexchange.com/a/198345[]
+:example: _git2.adoc
+include::_example.adoc[]
+
+'''
+
+.https://tex.stackexchange.com/a/198345[]
+:example: _git3.adoc
+include::_example.adoc[]
+
+
+.https://blog.othree.net/log/2017/03/25/gitdags-git[]
+:example: _git4.adoc
+include::_example.adoc[]
+
+
+== Plots
+
+.https://tikz.dev/tutorial[]
+:example: _plot1.adoc
+include::_example.adoc[]
+
+'''
+
+.https://tex.stackexchange.com/a/65692[]
+:example: _plot2.adoc
+include::_example.adoc[]
+
+'''
+
+.https://tikz.dev/tikz-plots[]
+:example: _plot3.adoc
+include::_example.adoc[]
+
+== 3d
+
+.https://tikz.dev/library-3d[]
+:example: _3d1.adoc
+include::_example.adoc[]
+
+'''
+
+.https://tikz.dev/library-3d[]
+:example: _3d2.adoc
+include::_example.adoc[]

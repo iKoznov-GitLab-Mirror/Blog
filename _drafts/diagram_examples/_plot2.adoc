@@ -1,0 +1,10 @@
+[tikz,,svg,preamble=true]
+----
+\usepackage{pgfplots}
+~~~~
+\begin{tikzpicture}
+\begin{axis}
+\addplot [thick, domain=0:1]  (\x,{\x*\x});
+\end{axis}
+\end{tikzpicture}
+----

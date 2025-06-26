@@ -1,0 +1,9 @@
+[tikz,,svg]
+----
+\usetikzlibrary {3d}
+\begin{tikzpicture}[->]
+  \draw (0,0,0) -- (xyz cylindrical cs:radius=1);
+  \draw (0,0,0) -- (xyz cylindrical cs:radius=1,angle=90);
+  \draw (0,0,0) -- (xyz cylindrical cs:z=1);
+\end{tikzpicture}
+----

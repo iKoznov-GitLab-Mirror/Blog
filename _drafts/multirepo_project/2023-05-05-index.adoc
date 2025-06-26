@@ -1,0 +1,35 @@
+:experimental:
+= Multirepo project ideas
+
+Splitting project into multiple git repos is attractive idea, if to make so, it will be easy to reuse components between different applications. Organize parallel development of multiple repos is challenging task, a lot of technical questions are arising. But it is rewarding.
+
+== Develop locally
+
+Example of using CMake + conan workspaces for multirepo project, see https://github.com/wartsilavoyage/cmake_conan_workspace[GitHub repo].
+
+== Clion features
+
+Clion detects if multiple git repos are existing under project directory.
+
+.Clion git panels with window presenting commit to multiple repos. And history for multiple repos simultaneously.
+image::commit_and_history.webp[]
+
+.Push commits dialog allows to change name of all destination repos branches simultaneously, even if such remote branches do not exist. To do so press btn:[Edit all targets].
+image::push_to_same_branch.webp[]
+
+NOTE: If you try to push to protected branch, CLion will rise error. And you will be forced to select branch, button btn:[Edit all targets] is very handy in that case.
+
+.Pull all repo with one button click.
+image::git_pull_all.webp[]
+
+.If Clion does not automatically detect another git repos in project subdirectories. Go to menu:Settings[Version Control > Directory Mappings] and add desired git directory.
+image::git_roots.webp[]
+
+[bibliography]
+== References
+
+* GitColony tool for linked pull requests, https://www.gitcolony.com/features#linked-pull-requests[feature]
+
+* GitHub actions to chain multiple pull requests, https://blog.kie.org/2021/07/cross-repo-pull-requests-build-chain-tool-to-the-rescue.html[blog-post], https://github.com/kiegroup/github-action-build-chain#usage-example[GitHub repo]
+
+* Yandex report about monorepos, https://habr.com/ru/companies/yandex/articles/469021[habr article], https://www.youtube.com/watch?v=Xg-oZp0EcYc&t=19354s[youtube video]
