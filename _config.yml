@@ -42,7 +42,7 @@ permalink: /:year/:month/:day/:title/
 #permalink: /posts/:title/
 
 #remote_theme: JakeSteam/minimaJake
-theme: minima
+theme: minimal-mistakes-jekyll
 minima:
   skin: classic
   social_links:
