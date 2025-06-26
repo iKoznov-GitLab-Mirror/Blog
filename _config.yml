@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Igor Koznov personal website
+title: Hi, welcome to my webpage
 author:
   name: "Igor Koznov"
   bio: "Programming is fun"
