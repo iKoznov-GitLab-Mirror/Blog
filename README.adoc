@@ -2,7 +2,7 @@
 
 === Web site site
 
-Site is hosted with GitHub pages https://ikoznov.github.io/blog[].
+Site is hosted with GitLab pages https://ikoznov.gitlab.io/blog[].
 
 === Build locally
 
