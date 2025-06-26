@@ -68,6 +68,7 @@ exclude:
   - Dockerfile
   - .github/
   - .gitlab-ci.yml
+  - .idea/
 
 defaults:
   - # without this jekyll-sitemap fails
