@@ -19,7 +19,27 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Igor Koznov personal website
-author: { name: Igor Koznov, email: igor.koznov90@protonmail.com }
+author:
+  name: "Igor Koznov"
+  bio: "Programming is fun"
+  avatar: "/assets/images/bio-photo.webp"
+  links:
+    - label: "Email"
+      icon: "fa-solid fa-envelope"
+      url: "mailto:igor.koznov90@protonmail.com"
+    - label: "Website"
+      icon: "fa-solid fa-link"
+      url: "https://ikoznov.gitlab.io"
+    - label: "Google Scholar"
+      icon: "fa-brands fa-google-scholar"
+      url: "https://scholar.google.com/citations?hl=en&user=pB5WTLUAAAAJ"
+    - label: "LinkedIn"
+      icon: "fa-brands fa-linkedin"
+      url: "https://github.com/iKoznov"
+    - label: "GitHub"
+      icon: "fa-brands fa-github"
+      url: "https://github.com/iKoznov"
+
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -29,6 +49,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 plugins:
   #- jekyll-remote-theme
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-postfiles
   - jekyll-asciidoc
@@ -41,8 +62,17 @@ plugins:
 #permalink: /:year/:month/:day/:title/
 permalink: /posts/:title/
 
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
 #remote_theme: JakeSteam/minimaJake
-theme: minima
+theme: minimal-mistakes-jekyll
 minima:
   skin: classic
   nav_pages:
@@ -77,6 +107,17 @@ defaults:
   - # without this jekyll-sitemap fails
     scope: { path: "**/*.pdf" }
     values: { sitemap: false }
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
