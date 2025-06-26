@@ -38,8 +38,8 @@ plugins:
   - jekyll-seo-tag # included in minima
   #- jekyll-archives
 
-permalink: /:year/:month/:day/:title/
-#permalink: /posts/:title/
+#permalink: /:year/:month/:day/:title/
+permalink: /posts/:title/
 
 #remote_theme: JakeSteam/minimaJake
 theme: minimal-mistakes-jekyll
