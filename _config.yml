@@ -75,13 +75,14 @@ sass:
   sass_dir: _sass
   style: compressed
 
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+#compress_html:
+#  clippings: all
+#  ignore:
+#    envs: development
 
 plugins:
   #- jekyll-remote-theme
+  - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-postfiles
