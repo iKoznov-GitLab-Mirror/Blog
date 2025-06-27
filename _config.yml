@@ -21,15 +21,16 @@
 title: Igor Koznov's website
 author:
   name: "Igor Koznov"
-  bio: "Software engineer"
   avatar: "/assets/images/bio-photo.webp"
+  bio: "Software engineer"
+  #location: "Belgrade, Serbia"
   links:
+    #- label: "Website"
+    #  icon: "fa-solid fa-link"
+    #  url: "https://ikoznov.gitlab.io"
     - label: "Email"
       icon: "fa-solid fa-envelope"
       url: "mailto:igor.koznov90@protonmail.com"
-    - label: "Website"
-      icon: "fa-solid fa-link"
-      url: "https://ikoznov.gitlab.io"
     - label: "Google Scholar"
       icon: "fa-brands fa-google-scholar"
       url: "https://scholar.google.com/citations?hl=en&user=pB5WTLUAAAAJ"
@@ -114,8 +115,9 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: # true
+      show_date: true
+      read_time: false
+      comments: false
       share: true
       related: true
 
