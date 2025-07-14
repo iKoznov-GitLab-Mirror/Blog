@@ -105,10 +105,14 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
+encoding: utf-8
+
 # fixes error to enable es6 syntax
 jekyll-minifier:
   uglifier_args:
     harmony: true
+  exclude:
+    - "assets/js/plugins/smooth-scroll.js"
 
 #remote_theme: JakeSteam/minimaJake
 theme: minimal-mistakes-jekyll

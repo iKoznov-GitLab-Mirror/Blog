@@ -20,7 +20,7 @@ docker system prune -a --volumes -f
 
 [source,shell]
 ----
-rm -rf Gemfile.lock || true && docker rm -f ikoznov_jekyll && docker run --rm -it -v `pwd`:/project -w /project -p 4000:4000 -p 35729:35729 -e JEKYLL_ENV=production --name ikoznov_jekyll --pull=always ghcr.io/ikoznov/asciidoc_jekyll/fedora:main bash -c "bundle install --local && ./version.sh && bundle exec jekyll serve --trace --livereload --host 0.0.0.0 --drafts --config _config.yml,_config-version.yml"
+rm -rf Gemfile.lock || true && docker rm -f ikoznov_jekyll && docker run --rm -it -v `pwd`:/project -w /project -p 4000:4000 -p 35729:35729 -e JEKYLL_ENV=production --name ikoznov_jekyll --pull=always ghcr.io/ikoznov/asciidoc_jekyll/fedora:main bash -c "bundle install --local && ./version.sh && bundle exec jekyll serve --trace --watch --verbose --livereload --host 0.0.0.0 --future --drafts --config _config.yml,_config-version.yml"
 ----
 
 [NOTE]
