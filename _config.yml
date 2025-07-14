@@ -105,6 +105,11 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
+# fixes error to enable es6 syntax
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
+
 #remote_theme: JakeSteam/minimaJake
 theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
