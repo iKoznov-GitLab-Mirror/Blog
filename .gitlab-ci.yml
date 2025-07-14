@@ -1,4 +1,4 @@
-image: ghcr.io/ikoznov/asciidoc_jekyll/fedora:main-3806dbb
+image: ghcr.io/ikoznov/asciidoc_jekyll/fedora:main
 
 variables:
   LC_ALL: C.UTF-8
