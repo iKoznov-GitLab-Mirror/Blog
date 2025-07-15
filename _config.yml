@@ -133,10 +133,10 @@ asciidoctor:
   base_dir: :docdir
   safe: unsafe
   attributes:
-    source-language: text
-    source-highlighter: rouge
-    rouge-css: style
     icons: font
+    source-language: text
+    source-highlighter: pygments
+    pygments-css: style
 
 show_excerpts: true
 google_analytics: G-X2LJQ55K1S # minima feature
