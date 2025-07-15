@@ -8,4 +8,4 @@ Linked files and images can be located in the same dir as article. Thanks to the
 
 ![fish](show_fish.jpg)
 
-Also, it is possible to place link to regular [file](hello.pdf).
+Also, it is possible to place link to regular [file](sample-file.pdf).
