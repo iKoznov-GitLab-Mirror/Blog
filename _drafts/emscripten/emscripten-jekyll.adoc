@@ -18,7 +18,7 @@ _posts/
 
 In your Markdown post, include HTML that loads and initializes your Emscripten program:
 
-[source,cpp]
+[source,c++]
 ----
 <div id="emscripten-container">
   <canvas id="canvas" width="800" height="600"></canvas>

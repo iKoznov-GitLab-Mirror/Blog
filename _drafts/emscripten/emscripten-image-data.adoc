@@ -4,7 +4,7 @@ Here's how to process image data using a C++ function compiled with Emscripten (
 
 == Write your C++ function
 
-[source,cpp]
+[source,c++]
 ----
 // image_processing.cpp
 #include <emscripten/bind.h>
@@ -91,7 +91,7 @@ img.src = 'your-image.jpg';
 
 For better performance with large images, you can use typed arrays and direct memory access:
 
-[source,cpp]
+[source,c++]
 ----
 // Add to C++ file
 extern "C" {

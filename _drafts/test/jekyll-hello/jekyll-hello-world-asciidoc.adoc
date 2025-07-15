@@ -24,7 +24,7 @@ int main() {
 
 == C++
 
-[source,cpp]
+[source,c++]
 ----
 #include <iostream>
 
@@ -34,7 +34,7 @@ int main() {
 }
 ----
 
-## Python
+== Python
 
 [source,python]
 ----
