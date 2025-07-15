@@ -1,7 +1,3 @@
----
-render_with_liquid: false
----
-
 = Emscripten in Jekyll
 
 To embed an Emscripten-compiled program in a Jekyll post, follow these steps:

@@ -1,7 +1,3 @@
----
-render_with_liquid: false
----
-
 = Processing Image Data with C++ and Emscripten
 
 Here's how to process image data using a C++ function compiled with Emscripten (`emcc`):
