@@ -133,9 +133,10 @@ asciidoctor:
   base_dir: :docdir
   safe: unsafe
   attributes:
-    - source-highlighter=rouge
-    - source-language=cpp
-    - icons=font
+    source-language: text
+    source-highlighter: rouge
+    rouge-css: style
+    icons: font
 
 show_excerpts: true
 google_analytics: G-X2LJQ55K1S # minima feature

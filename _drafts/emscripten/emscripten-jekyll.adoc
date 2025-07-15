@@ -1,0 +1,53 @@
+---
+render_with_liquid: false
+---
+
+= Emscripten in Jekyll
+
+To embed an Emscripten-compiled program in a Jekyll post, follow these steps:
+
+== Store the compiled files
+
+Since you have the `jekyll-postfiles` plugin enabled, you can place the compiled files (`.js`, `.wasm`, and any HTML) directly in your post's directory:
+
+----
+_posts/
+  2023-01-01-your-post/
+    index.md
+    your-program.js
+    your-program.wasm
+----
+
+== Create the HTML in your post
+
+In your Markdown post, include HTML that loads and initializes your Emscripten program:
+
+[source,cpp]
+----
+<div id="emscripten-container">
+  <canvas id="canvas" width="800" height="600"></canvas>
+</div>
+
+<script type="text/javascript">
+  var Module = {
+    canvas: document.getElementById('canvas'),
+    onRuntimeInitialized: function() {
+      console.log('WebAssembly program loaded');
+    }
+  };
+</script>
+<script async type="text/javascript" src="{{ site.baseurl }}{% link _posts/2023-01-01-your-post/your-program.js %}"></script>
+----
+
+== For more complex needs
+
+For more interaction, add HTML controls:
+
+[source,html]
+----
+<div class="emscripten-controls">
+  <button onclick="Module.ccall('my_function', null, [], [])">Run Function</button>
+</div>
+----
+
+This approach works with your existing Jekyll setup and uses the `jekyll-postfiles` plugin you already have configured.

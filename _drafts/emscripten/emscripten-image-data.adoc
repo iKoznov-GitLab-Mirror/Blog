@@ -1,0 +1,133 @@
+---
+render_with_liquid: false
+---
+
+= Processing Image Data with C++ and Emscripten
+
+Here's how to process image data using a C++ function compiled with Emscripten (`emcc`):
+
+== Write your C++ function
+
+[source,cpp]
+----
+// image_processing.cpp
+#include <emscripten/bind.h>
+#include <vector>
+
+// Example function: Invert image colors
+void processImage(std::vector<unsigned char>& pixels) {
+  // Process RGB values (skip alpha)
+  for (size_t i = 0; i < pixels.size(); i += 4) {
+    pixels[i] = 255 - pixels[i];         // R
+    pixels[i + 1] = 255 - pixels[i + 1]; // G
+    pixels[i + 2] = 255 - pixels[i + 2]; // B
+    // i+3 is alpha, typically left unchanged
+  }
+}
+
+// Binding code for Emscripten
+EMSCRIPTEN_BINDINGS(image_module) {
+  emscripten::register_vector<unsigned char>("UCharVector");
+  emscripten::function("processImage", &processImage);
+}
+----
+
+== Compile with Emscripten
+
+[source,bash]
+----
+emcc image_processing.cpp -o image_processing.js -s WASM=1 -s ALLOW_MEMORY_GROWTH=1 -s MODULARIZE=1 -s EXPORT_NAME="ImageModule" -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORT_ES6=1 --bind
+----
+
+== 3. Use in JavaScript
+
+[source,javascript]
+----
+// Import the module
+import ImageModule from './image_processing.js';
+
+// Load the image
+const img = new Image();
+img.crossOrigin = 'anonymous';
+img.onload = async function() {
+  // Initialize the WebAssembly module
+  const imageProcessor = await ImageModule();
+
+  // Create canvas and get image data
+  const canvas = document.createElement('canvas');
+  canvas.width = img.width;
+  canvas.height = img.height;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+  // Convert to vector for C++
+  const pixelArray = new Uint8Array(imageData.data);
+  const vector = new imageProcessor.UCharVector();
+
+  // Copy pixels to vector
+  for (let i = 0; i < pixelArray.length; i++) {
+    vector.push_back(pixelArray[i]);
+  }
+
+  // Process the image with C++ function
+  imageProcessor.processImage(vector);
+
+  // Copy back to imageData
+  for (let i = 0; i < pixelArray.length; i++) {
+    imageData.data[i] = vector.get(i);
+  }
+
+  // Put processed image back to canvas
+  ctx.putImageData(imageData, 0, 0);
+
+  // Display the canvas
+  document.body.appendChild(canvas);
+
+  // Clean up
+  vector.delete();
+};
+
+img.src = 'your-image.jpg';
+----
+
+== Performance optimization
+
+For better performance with large images, you can use typed arrays and direct memory access:
+
+[source,cpp]
+----
+// Add to C++ file
+extern "C" {
+  EMSCRIPTEN_KEEPALIVE
+  void processImageDirect(uint8_t* pixels, int numPixels) {
+    for (int i = 0; i < numPixels * 4; i += 4) {
+      pixels[i] = 255 - pixels[i];         // R
+      pixels[i + 1] = 255 - pixels[i + 1]; // G
+      pixels[i + 2] = 255 - pixels[i + 2]; // B
+    }
+  }
+}
+----
+
+[source,javascript]
+----
+// In JavaScript, use the more efficient direct memory approach
+const processImageDirect = imageProcessor.cwrap('processImageDirect', null, ['number', 'number']);
+const pixelCount = imageData.width * imageData.height;
+const pixelPtr = imageProcessor._malloc(pixelCount * 4);
+
+// Copy pixels to WebAssembly memory
+imageProcessor.HEAPU8.set(imageData.data, pixelPtr);
+
+// Process the image
+processImageDirect(pixelPtr, pixelCount);
+
+// Copy processed data back
+imageData.data.set(imageProcessor.HEAPU8.subarray(pixelPtr, pixelPtr + pixelCount * 4));
+
+// Free memory
+imageProcessor._free(pixelPtr);
+----
+
+This approach avoids vector overhead and reduces memory copying operations.
