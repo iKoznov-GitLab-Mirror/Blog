@@ -120,15 +120,15 @@ jekyll-minifier:
 theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
-minima:
-  skin: classic
-  nav_pages:
-    - portfolio.adoc
-    - about.adoc
-  social_links:
-    - { title: "LinkedIn", icon: linkedin, url: "https://www.linkedin.com/in/igor-koznov-ba92b5367" }
-    - { title: "Google Scholar",  icon: google-scholar, url: "https://scholar.google.com/citations?hl=en&user=pB5WTLUAAAAJ" }
-    - { title: "GitHub", icon: github, url: "https://github.com/iKoznov" }
+#minima:
+#  skin: classic
+#  nav_pages:
+#    - portfolio.adoc
+#    - about.adoc
+#  social_links:
+#    - { title: "LinkedIn", icon: linkedin, url: "https://www.linkedin.com/in/igor-koznov-ba92b5367" }
+#    - { title: "Google Scholar",  icon: google-scholar, url: "https://scholar.google.com/citations?hl=en&user=pB5WTLUAAAAJ" }
+#    - { title: "GitHub", icon: github, url: "https://github.com/iKoznov" }
 
 asciidoc: {}
 asciidoctor:
