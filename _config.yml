@@ -32,6 +32,7 @@ copyright: "Igor Koznov"
 
 author:
   name: "Igor Koznov"
+  url: "https://ikoznov.gitlab.io"
   avatar: "/assets/images/bio-photo.webp"
   bio: "Software developer"
   #location: "Belgrade, Serbia"
@@ -92,6 +93,7 @@ plugins:
   - jekyll-feed # included in minima
   - jekyll-seo-tag # included in minima
   #- jekyll-archives
+  - jekyll-include-cache
 
 #permalink: /:year/:month/:day/:title/
 permalink: /posts/:title/
