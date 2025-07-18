@@ -40,9 +40,6 @@ author:
     #- label: "Website"
     #  icon: "fa-solid fa-link"
     #  url: "https://ikoznov.gitlab.io"
-    - label: "Email"
-      icon: "fa-solid fa-envelope"
-      url: "mailto:ikoznov@proton.me"
     - label: "LinkedIn"
       icon: "fa-brands fa-linkedin"
       url: "https://www.linkedin.com/in/igor-koznov-ba92b5367"
@@ -55,6 +52,9 @@ author:
 #    - label: "Bluesky"
 #      icon: "fa-brands fa-bluesky"
 #      url: "https://bsky.app/profile/ikoznov.bsky.social"
+    - label: "Email"
+      icon: "fa-solid fa-envelope"
+      url: "mailto:ikoznov@proton.me"
 
 # Site Footer
 footer:
@@ -62,9 +62,6 @@ footer:
     #- label: "Website"
     #  icon: "fa-solid fa-link"
     #  url: "https://ikoznov.gitlab.io"
-    - label: "Email"
-      icon: "fa-solid fa-envelope"
-      url: "mailto:ikoznov@proton.me"
     - label: "LinkedIn"
       icon: "fa-brands fa-linkedin"
       url: "https://www.linkedin.com/in/igor-koznov-ba92b5367"
@@ -77,6 +74,9 @@ footer:
 #    - label: "Bluesky"
 #      icon: "fa-brands fa-bluesky"
 #      url: "https://bsky.app/profile/ikoznov.bsky.social"
+    - label: "Email"
+      icon: "fa-solid fa-envelope"
+      url: "mailto:ikoznov@proton.me"
 
 sass:
   sass_dir: _sass
