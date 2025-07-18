@@ -43,6 +43,9 @@ author:
     - label: "Email"
       icon: "fa-solid fa-envelope"
       url: "mailto:ikoznov@proton.me"
+    - label: "LinkedIn"
+      icon: "fa-brands fa-linkedin"
+      url: "https://www.linkedin.com/in/igor-koznov-ba92b5367"
     - label: "Google Scholar"
       icon: "fa-brands fa-google-scholar"
       url: "https://scholar.google.com/citations?hl=en&user=pB5WTLUAAAAJ"
@@ -52,6 +55,9 @@ author:
     - label: "GitHub"
       icon: "fa-brands fa-github"
       url: "https://github.com/iKoznov"
+#    - label: "Bluesky"
+#      icon: "fa-brands fa-bluesky"
+#      url: "https://bsky.app/profile/ikoznov.bsky.social"
 
 # Site Footer
 footer:
@@ -62,15 +68,18 @@ footer:
     - label: "Email"
       icon: "fa-solid fa-envelope"
       url: "mailto:ikoznov@proton.me"
-    - label: "Google Scholar"
-      icon: "fa-brands fa-google-scholar"
-      url: "https://scholar.google.com/citations?hl=en&user=pB5WTLUAAAAJ"
     - label: "LinkedIn"
       icon: "fa-brands fa-linkedin"
       url: "https://www.linkedin.com/in/igor-koznov-ba92b5367"
+    - label: "Google Scholar"
+      icon: "fa-brands fa-google-scholar"
+      url: "https://scholar.google.com/citations?hl=en&user=pB5WTLUAAAAJ"
     - label: "GitHub"
       icon: "fa-brands fa-github"
       url: "https://github.com/iKoznov"
+#    - label: "Bluesky"
+#      icon: "fa-brands fa-bluesky"
+#      url: "https://bsky.app/profile/ikoznov.bsky.social"
 
 sass:
   sass_dir: _sass
